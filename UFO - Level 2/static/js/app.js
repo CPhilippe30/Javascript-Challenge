@@ -22,3 +22,5 @@ createData(tableData);
 
 button.on("click", () => {
     d3.event.preventDefault();
+
+    var inputDate = inputFieldDate.property("value").trim();
