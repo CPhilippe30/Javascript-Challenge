@@ -34,3 +34,8 @@ button.on("click", () => {
     let response = {
         filterDate
     }
+
+    if(response.filterDate.length !==0){
+        createData(filterDate);
+    }
+
