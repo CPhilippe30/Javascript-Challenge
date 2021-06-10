@@ -21,3 +21,5 @@ var createData = (dataInput) => {
         )
     });
 }
+
+createData(tableData);
