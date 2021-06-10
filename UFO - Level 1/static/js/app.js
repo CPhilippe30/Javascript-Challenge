@@ -29,3 +29,8 @@ button.on("click", () => {
     var inputDate = inputFieldDate.property("value").trim();
     var filterDate = tableData.filter(tableData => tableData.datetime === inputDate);
 
+    tbody.html("");
+
+    let response = {
+        filterDate
+    }
