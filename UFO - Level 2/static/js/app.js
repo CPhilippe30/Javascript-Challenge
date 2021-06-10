@@ -21,3 +21,4 @@ var createData = (dataInput) => {
 createData(tableData);
 
 button.on("click", () => {
+    d3.event.preventDefault();
