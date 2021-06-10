@@ -33,3 +33,5 @@ button.on("click", () => {
 // Filter list by text field
 var inputDate = inputFieldDate.property("value").trim();
 var inputCity = inputFieldCity.property("value").toLowerCase().trim();
+var filterDate = tableData.filter(tableData => tableData.datetime === inputDate);
+
