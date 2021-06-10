@@ -17,3 +17,7 @@ var createData = (dataInput) => {
         )
     });
 }
+
+createData(tableData);
+
+button.on("click", () => {
