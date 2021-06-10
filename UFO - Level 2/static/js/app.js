@@ -45,5 +45,14 @@ let response = {
 if(response.filterCombinedData.length !== 0) {
     createData(filterCombinedData);
 }
+else if(response.filterCombinedData.length === 0 && ((response.filterDate.length !== 0 || response.filterCity.length !== 0))) {
+    createData(filterDate) || createData(filterCity);
+}
+
+else {
+    $tbody.append("tr").append("td").text("No UFO Sightings found");
+}
+})
+
 
 

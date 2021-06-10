@@ -11,7 +11,7 @@ var button = d3.select("#filter-btn");
 // Set values in input type date and time 
 var inputFieldDate = d3.select("#datetime");
 
-var columns = ["datetime", "city", "state", "country", "shape", "Duration", "comments"]
+var columns = ["datetime", "city", "state", "country", "shape", "duration", "comments"]
 
 // Input the data into the HTML
 var createData = (dataInput) => {
@@ -40,7 +40,7 @@ button.on("click", () => {
     }
 
     else {
-        $tbody.append("tr").append("td").text("No UFO Sightings found...Continue");
+        $tbody.append("tr").append("td").text("No UFO Sightings found");
     }
 })
 
