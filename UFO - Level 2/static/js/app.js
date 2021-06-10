@@ -35,4 +35,6 @@ var inputDate = inputFieldDate.property("value").trim();
 var inputCity = inputFieldCity.property("value").toLowerCase().trim();
 var filterDate = tableData.filter(tableData => tableData.datetime === inputDate);
 var filterCity = tableData.filter(tableData => tableData.city === inputCity);
+var filterCombinedData = tableData.filter(tableData => tableData.datetime === inputDate && tableData.city === inputCity);
 
+$tbody.html("");
