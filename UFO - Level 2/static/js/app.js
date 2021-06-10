@@ -10,3 +10,10 @@ var inputFieldCity = d3.select("#city");
 var columns = ["datetime", "city", "state", "country", "shape", "duration", "comments"]
 
 
+var createData = (dataInput) => {
+    dataInput.forEach(ufoSightings => {
+        var row = $tbody.append("tr");
+        columns.forEach(column => row.append("td").text(ufoSightings[column])
+        )
+    });
+}
