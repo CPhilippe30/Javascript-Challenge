@@ -16,10 +16,16 @@ var columns = ["datetime", "city", "state", "country", "shape", "Duration", "com
 // Input the data into the HTML
 var createData = (dataInput) => {
     dataInput.forEach(ufoSightings => {
-        var row = $tbody.append("tr");
+        var row = tbody.append("tr");
         columns.forEach(column => row.append("td").text(ufoSightings[column])
         )
     });
 }
 
 createData(tableData);
+
+button.on("click", () => {
+    d3.event.preventDefault();
+    var inputDate = inputFieldDate.property("value").trim();
+    var filterDate = tableData.filter(tableData => tableData.datetime === inputDate);
+
