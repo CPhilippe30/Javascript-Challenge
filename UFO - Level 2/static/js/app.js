@@ -30,4 +30,6 @@ createData(tableData);
 button.on("click", () => {
     d3.event.preventDefault();
 
-  
+// Filter list by text field
+var inputDate = inputFieldDate.property("value").trim();
+var inputCity = inputFieldCity.property("value").toLowerCase().trim();
