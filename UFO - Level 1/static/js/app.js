@@ -12,3 +12,5 @@ var button = d3.select("#filter-btn");
 var inputFieldDate = d3.select("#datetime");
 
 var columns = ["datetime", "city", "state", "country", "shape", "Duration", "comments"]
+
+// Input the data into the HTML
