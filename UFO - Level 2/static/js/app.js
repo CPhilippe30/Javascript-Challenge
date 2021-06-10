@@ -38,3 +38,12 @@ var filterCity = tableData.filter(tableData => tableData.city === inputCity);
 var filterCombinedData = tableData.filter(tableData => tableData.datetime === inputDate && tableData.city === inputCity);
 
 $tbody.html("");
+
+let response = {
+    filterDate, filterCity, filterCombinedData
+}
+if(response.filterCombinedData.length !== 0) {
+    createData(filterCombinedData);
+}
+
+
