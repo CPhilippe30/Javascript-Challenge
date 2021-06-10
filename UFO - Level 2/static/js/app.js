@@ -34,4 +34,5 @@ button.on("click", () => {
 var inputDate = inputFieldDate.property("value").trim();
 var inputCity = inputFieldCity.property("value").toLowerCase().trim();
 var filterDate = tableData.filter(tableData => tableData.datetime === inputDate);
+var filterCity = tableData.filter(tableData => tableData.city === inputCity);
 
