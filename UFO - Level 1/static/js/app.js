@@ -16,7 +16,7 @@ var columns = ["datetime", "city", "state", "country", "shape", "Duration", "com
 // Input the data into the HTML
 var createData = (dataInput) => {
     dataInput.forEach(ufoSightings => {
-        var row = tbody.append("tr");
+        var row = $tbody.append("tr");
         columns.forEach(column => row.append("td").text(ufoSightings[column])
         )
     });
@@ -29,7 +29,7 @@ button.on("click", () => {
     var inputDate = inputFieldDate.property("value").trim();
     var filterDate = tableData.filter(tableData => tableData.datetime === inputDate);
 
-    tbody.html("");
+    $tbody.html("");
 
     let response = {
         filterDate
@@ -38,4 +38,10 @@ button.on("click", () => {
     if(response.filterDate.length !==0){
         createData(filterDate);
     }
+
+    else {
+        $tbody.append("tr").append("td").text("No UFO Sightings found...Continue");
+    }
+})
+
 
