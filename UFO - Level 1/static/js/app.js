@@ -14,3 +14,10 @@ var inputFieldDate = d3.select("#datetime");
 var columns = ["datetime", "city", "state", "country", "shape", "Duration", "comments"]
 
 // Input the data into the HTML
+var createData = (dataInput) => {
+    dataInput.forEach(ufoSightings => {
+        var row = $tbody.append("tr");
+        columns.forEach(column => row.append("td").text(ufoSightings[column])
+        )
+    });
+}
